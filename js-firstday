@@ -1,0 +1,96 @@
+ 下面是一个关于js的脚本 ，在html中创建一个id为start的事件为runa的按钮，点击即可运行调试。
+ //工厂模式和构造者模式的区别
+    /*
+    1.这种模式其实就相当于其他语言的类的概念,但是你可以叫他方法;
+    2.工厂模式就是一种函数模式,创建实例的时候需要传入函数参数,而创建的过程真实是通过函数内部的new object
+    3.构造者模式实质是在创建的时候创建内存,而类或者说构造者本事,内部引用this去替代,当实例化的时候,this指向新的创建者
+    4.工厂模式最后需要return o的,构造者不需要;构造者模式需要创建实例的时候new,而工厂模式不需要;建议构造者函数的名字大写第一个字母;
+    5.函数继承call apply 不能继承构造函数的原型属性;只能给构造方式创建的实例的共享属性;
+     */
+//     function  Person(name,age,job){
+//
+//         Person.prototype.year = 2008;
+//         this.name = name;
+//         this.age = age;
+//         this.job  =job;
+//         this.sayname = function () {
+//             alert(this.job);
+//         }
+//    }
+//
+//    var person1 =new Person ("zhangsan",20,"siji");
+//    var person2 =new Person("lisi",21,"laoshi");
+//
+//
+//    function runa() {
+//       person1.sayname();
+//        person2.sayname();
+//        var o = new Object();
+//        Person.apply(o,["haha",22,"yisheng"]);
+//        o.sayname();
+//        alert(person1.year);
+//        alert(Object.getPrototypeOf(person1));
+//        person1.year = 25;
+////        delete person1.year;
+//        alert(person1.hasOwnProperty("year"));
+//        alert("year" in person1);
+//
+//        alert(typeof Array.prototype.sort);
+//
+//
+//
+//    }
+
+//    function runa() {
+//
+//        function Person(name, age, job){
+//            this.name = name;
+//            this.age = age;
+//            this.job = job;
+//            this.friends = ["Shelby", "Court"];
+//        }
+//
+//        Person.prototype = {
+//            constructor : Person,
+//            sayName : function(){
+//                alert(this.name);
+//            }
+//        }
+//
+//        var person1 = new Person("Nicholas", 29, "Software Engineer");
+//
+//        var person2 = new Person("Greg", 27, "Doctor");
+//        person1.friends.push("Van");
+//        alert(person1.friends);    //"Shelby,Count,Van"
+//        alert(person2.friends);    //"Shelby,Count"
+//        alert(person1.friends === person2.friends);
+//        alert(person1.sayName === person2.sayName);
+//        person1.sayName();
+//        person2.sayName();
+////        alert(person2.prototype.sayName);
+//        //false
+//        //true
+//    }
+
+    function runa() {
+
+        function Superman(name) {
+            this.name = name;
+            this.sayname = function () {
+                alert(this.name);
+            }
+        }
+        function Subman(name) {
+            this.name = name;
+        }
+
+        Subman.prototype = new Superman();
+        var person1 = new Subman("zhangsan");
+        var person2 = new  Superman("lisi");
+        alert(Superman.prototype);
+        alert(person1.constructor.prototype);
+        alert(Subman.prototype);
+        alert(person1.prototype);
+        alert(person2.prototype);
+
+    }
