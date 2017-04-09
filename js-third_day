@@ -1,0 +1,21 @@
+一：bom的对象
+1.window对象，包括本身的大小位置的设置；settimeout，setinterval分别是超时调用，和间歇调；对话框，alert，confirm，Promet；
+2.location对象，属性URL的有herf,,search，hash，hostname，port，replace，rreload
+3.navigator对象，
+4，插件检测，IE较为麻烦hasplugins
+5.screen对象，一些像素的属性
+6.history对象,属性go
+
+二：客户端检测
+1.能力检测，就是检测是不是有某个函数的功能。
+2.怪癖检测，检测浏览器的缺陷
+3.用户代理检测。。。是一个复杂的过程。。。详细看js高级程序设计第九章
+
+三：DOM（是个重要的内容）
+（1）1.节点，2.Node类型，3.document类型，4.elememt类型，5.text类型，6.comment类型
+          7.CDATASection类型，8.DocumentType类型，9.DocumentFragment类型，10.Attr类型
+（2）DOM的技术操作
+         1.动态脚本，2动态样式，3操作表格，nodelist的理解（近亲namenodeMap,HTMLCollection   都是动态的），
+
+四：DOM扩展
+1选择符API,1.1querySelector 1.2querySelectorAll 3matchesSelector
