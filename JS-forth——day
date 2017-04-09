@@ -1,0 +1,13 @@
+
+一：DOM扩展
+1选择符API,1.1querySelector 1.2querySelectorAll 3matchesSelector
+2.元素的遍历 element traversal新增的元素
+3.HTML5 1getElementsByClassName()   2 div.classList.remove(“user"); 3􏵷􏵸􏵹􏵺 􏵷􏵸􏵹􏵺 􏵷􏵸􏵹􏵺焦点管理
+    4.HTMLDocument变化，readystate  5，字符集属性，及其数据属性 6，插入标记
+7专有扩展，文档模式，children属性，contains方法 8插入文本 ，innertext属性
+
+二、DOM2和DOM3
+（DOM2 DOM3的变化  、操作样式的DOMAPI DOM遍历和范围、 DOM的具体子集：：：DOM2的核心，视图，事件，样式，遍历和范围，HTML）
+1DOM的变化  2XML命名空间的变化xmlns  3document类型的变化 4 element类型的变化 5namenodemap类型的变化 6documenttype类型变化 7document类型变化 8node类型的变化
+9 框架的变化 10 样式 DOM样式的属性和方法 11计算的样式（只读的）12操作样式表 13创建规则删除规则 14元素大小，偏移量，客户区大小，滚动大小 15确定元素大小 16遍历（深度优先遍历：可以看JS高级程序设计的图12-5） 16NodeIterator 17TreeWalker 
+
